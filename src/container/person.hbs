@@ -1,0 +1,77 @@
+<div>
+    {{#with person}}
+        <div>
+            <h1>{{name}}</h1>
+            <hr>
+            <hr>
+            <div><b>Years: {{age}},  {{gender}}</b></div><br>
+            <br>
+            <div>
+                <div><b>Address:</b></div>
+                {{#with address}}
+                    <ul>{{street}}, {{city}},<br> {{state}}, {{zip}}, {{country}}</ul>
+                {{/with}}
+            </div>
+                <section>
+                    <div>
+                        <ul>
+                            {{#each education}}
+                                <hr>
+                                    <div><h3>Educational background</h3></div>
+                                <hr>
+                                <li>
+                                    <div>Degree: {{degree}}</div> <br>
+                                    <div>Major: {{major}}</div><br>
+                                    <div>University: {{university}}</div><br>
+                                    <div>Issue: {{graduationYear}}</div>
+                                </li>
+                            
+                            {{/each}}
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div>
+                <section>
+                    <div>
+                        {{#each workExperience}}
+                            
+                            <hr>
+                                <div>
+                                    <h3>Relevant Experience</h3>
+                                </div>
+                            <hr>
+                            <li>
+                                <div>Company: {{company}}</div><br>
+                                <div>Position: {{title}}</div><br>
+                                <div>{{startDate}}  -  {{endDate}}</div><br>
+                                <div>Responsibilities:
+                                    {{#each responsibilities}}
+                                        <li>{{this}}</li>
+                                    {{/each}}
+                                </div>
+                                <br>
+                                <div>Est:{{year_founded}}</div><br>
+                                <div>Industry:{{industry}}</div>
+                                <br>
+                                <br>
+                                <div>
+                                    {{#each employees}}
+                                    <div>Employees:</div>
+                                    <br>
+                                        
+                                            <div>Person: {{name}}</div><br>
+                                            <div>Position: {{position}}</div><br>
+                                            <div>Department: {{department}}</div><br>
+                                        </li>
+                                    {{/each}}
+                                </div>
+                            </li>
+
+                        {{/each}}
+                    </div>
+                </section>
+            </div>
+    {{/with}}
+</div>
