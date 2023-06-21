@@ -291,27 +291,20 @@ router.get('/work', function (req, res) {
   })
 })
 
-// ================================================================
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
 
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
-// ================================================================
 
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout:`person`,
+    layout: `person`,
+
     person: {
       name: 'Emma Johnson',
       age: 32,
       gender: 'Female',
       address: {
-        street: '123 Main St',
+
+        street: '123 Main St.',
         city: 'New York',
         state: 'NY',
         zip: '10001',
@@ -330,8 +323,10 @@ router.get('/person', function (req, res) {
         {
           company: 'Google',
           title: 'Software Engineer',
-          startDate: '2012-06-01',
-          endDate: '2016-12-31',
+
+          startDate: '2012.06.01',
+          endDate: '2016.12.31',
+
           responsibilities: [
             'Developed new features for Google Maps',
             'Worked on improving search algorithms',
@@ -399,6 +394,7 @@ router.get('/person', function (req, res) {
     },
   })
 })
+
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
@@ -495,5 +491,6 @@ router.get('/bio', function (req, res) {
     },
   })
 })
+
 // Підключаємо роутер до бек-енду
 module.exports = router
