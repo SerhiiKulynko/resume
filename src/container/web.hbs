@@ -8,21 +8,24 @@
                 <div>Name: <b>{{name}}</b></div>
                 <div>Version: {{version}}</div>
                 <div>Description: {{description}}</div>
-                <section>                    
-                    {{#each elements}}
-                    <div><h4>Element:</h4></div>
-                        <div>Element name: <b>{{name}}</b></div>
-                        <div>Description: {{description}}</div>
-                        <section>
-                            <div><h5>Attributes:</h5></div>
-                            {{#each attributes}}
-                                <div>Name: {{name}}</div>
-                                <div>Description: {{description}}</div>
-                                <br>
-                            {{/each}}
-                        </section>
-                        <br>
-                    {{/each}}
+                <section>  
+                    {{#if elements}}  
+                    <div><h4>Elements:</h4></div>                
+                        {{#each elements}}
+                        
+                            <div>Element name: <b>{{name}}</b></div>
+                            <div>Description: {{description}}</div>
+                            <section>
+                                <div><h5>Attributes:</h5></div>
+                                {{#each attributes}}
+                                    <div>Name: {{name}}</div>
+                                    <div>Description: {{description}}</div>
+                                    <br>
+                                {{/each}}
+                            </section>
+                            <br>
+                        {{/each}}
+                    {{/if}}
                 </section>                
                 <section>                    
                     {{#each properties}}
