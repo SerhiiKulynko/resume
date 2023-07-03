@@ -803,4 +803,4 @@ router.get('/web', function (req, res) {
 // ================================================================
 
 // Підключаємо роутер до бек-енду
-// module.exports = router
+module.exports = router
