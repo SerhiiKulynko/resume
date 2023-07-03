@@ -573,7 +573,7 @@ router.get('/program', function (req, res) {
     },
   })
 })
-
+// =====================================================================================
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
 
