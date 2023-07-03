@@ -488,10 +488,7 @@ router.get('/bio', function (req, res) {
   })
 })
 
-
 // =================================================================
-
-
 
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -672,8 +669,8 @@ router.get('/car', function (req, res) {
       total: 28990,
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
-
+})
+//                  ↑↑ сюди вводимо JSON дані
 
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
