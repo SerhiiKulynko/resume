@@ -49,8 +49,10 @@
                                                     </div>
                                                 {{#each exhibits}}
 
+
                                                     <div>Name: <b>{{name}}</b></div>
                                                     <div>{{#if artist }}Artist:{{artist}}{{/if}}</div>
+
 
                                                     <div>Description: {{description}}</div>
                                                     <div>Audioguide: {{#if audio_guide}}Yes{{/if}}</div>
@@ -83,6 +85,12 @@
                                     <div>                          
                                         <div><b>Performers</b></div>
                                         {{#each performers}} 
+
+
+                                                <div>Name: <b>{{name}}</b></div>
+
+=======
+                                                                                
 
                                                 <div>Name: <b>{{name}}</b></div>
 
@@ -118,3 +126,4 @@
         </div>
    {{/with}}
 </div>
+
