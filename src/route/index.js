@@ -573,7 +573,7 @@ router.get('/program', function (req, res) {
     },
   })
 })
-
+// =====================================================================================
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -882,4 +882,4 @@ router.get('/js', function (req, res) {
 // ================================================================
 
 // Підключаємо роутер до бек-енду
-// module.exports = router
+module.exports = router
