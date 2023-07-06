@@ -1,0 +1,116 @@
+<div>
+    <div><h2>{{name}}</h2></div>
+    <hr>
+    <hr>
+    <div><b>{{description}}</b></div>
+    <hr>
+    <div>
+        {{#with history}}
+            <div>Created: {{year}}</div>
+            <div>Founder: {{founder}}</div>
+        {{/with}}
+    </div>
+    <hr>
+    <ul>
+        {{#if types}}
+        <div><b>Types:</b></div>
+        <br>
+            {{#each types}}
+                <li>{{this}}</li>
+            {{/each}}
+        {{/if}}        
+    </ul>
+    <br>
+    <div>
+        {{#with syntax}}
+            <div>
+                <b>Variables:</b>
+                {{#each variables}}
+                    {{#if @last}}
+                    {{this}}.
+                    {{else}}
+                    {{this}},
+                    {{/if}}
+                {{/each}}
+            </div>  
+            <div>
+                <b>Functions:</b>
+                {{#each functions}}
+                    {{#if @last}}
+                    {{this}}.
+                    {{else}}
+                    {{this}},
+                    {{/if}}
+                {{/each}}
+            </div>  
+             <div>
+                <b>Conditionals:</b>
+                {{#each conditionals}}
+                    {{#if @last}}
+                    {{this}}.
+                    {{else}}
+                    {{this}},
+                    {{/if}}
+                {{/each}}
+            </div>      
+             <div>
+                <b>Loops:</b>
+                {{#each loops}}
+                    {{#if @last}}
+                    {{this}}.
+                    {{else}}
+                    {{this}},
+                    {{/if}}
+                {{/each}}
+            </div>  
+             <div>
+                <b>Classes:</b>
+                {{#each classes}}
+                    {{#if @last}}
+                    {{this}}.
+                    {{else}}
+                    {{this}},
+                    {{/if}}
+                {{/each}}
+            </div>    
+        {{/with}}
+    </div>
+    <br>
+    <ul>
+        <div><b>Features:</b></div>
+        <br>
+        {{#each features}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    <br>
+    <ul>
+        <div><b>Libraries:</b></div>
+        <br>
+        {{#each libraries}}
+            <div>                
+                <button type="button" button class="btn btn-link">{{this}}</button>
+            </div>
+        {{/each}}
+    </ul>
+    <br>
+     <ul>
+        <div><b>Tools:</b></div>
+        <br>
+        {{#each tools}}
+            <div>                
+                <button type="button" button class="btn btn-link">{{this}}</button>
+            </div>
+        {{/each}}
+    </ul>
+    <br>
+    <ul>
+        <div><b>Communities:</b></div>
+        {{#each community}}
+            <li>{{name}}, <button type="button" button class="btn btn-link">{{type}}</button></li>
+        {{/each}}
+    </ul>
+
+
+
+</div>
