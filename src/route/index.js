@@ -802,7 +802,6 @@ router.get('/web', function (req, res) {
   })
 })
 
-
 router.get('/mac', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -886,7 +885,8 @@ router.get('/mac', function (req, res) {
         },
       ],
     },
-
+  })
+})
 
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1039,7 +1039,10 @@ router.get('/facebook', function (req, res) {
             ],
           },
         ],
-
+      },
+    ],
+  })
+})
 
 router.get('/bootstrap', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1116,11 +1119,11 @@ router.get('/task21', function (req, res) {
         },
       ],
     },
-
+  })
+})
 
 router.get('/task22', function (req, res) {
   // res.render генерує нам HTML сторінку
-
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task22', {
     layout: `basic`,
@@ -1172,7 +1175,8 @@ router.get('/task22', function (req, res) {
         },
       },
     },
-
+  })
+})
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
