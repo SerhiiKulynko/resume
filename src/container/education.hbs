@@ -6,7 +6,7 @@
                     
             <section>
                 
-                <ul>
+                <ul class="ps-5">
                     {{#each colleges}}
 
                         <li>
@@ -18,18 +18,17 @@
                 </ul>
 
             </section>
-            {{>title data="My certificates" big=false}}
-
-            <ul>
-                {{#each certificates}}
-                    <li>
-                        {{name}} ({{id}})
-                    </li>
-                {{/each}}
-            </ul>
+            
+            {{>title data="My certificates" big=false}}           
 
             <section>
-
+                <ul class="ps-5">
+                    {{#each certificates}}
+                        <li>
+                            {{name}} ({{id}})
+                        </li>
+                    {{/each}}
+                </ul>
             </section>
         </main>     
     {{/with}}
