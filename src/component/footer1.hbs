@@ -1,14 +1,9 @@
-  
-    <div>
+<footer>
+    <div class="my-5">
         {{#with social}}
-            {{>link text=email.text href=email.href blank=true }}
-            
-            
-            {{>link text=phone.text href=phone.href blank=true }}
-            
-            
+            {{>link text=email.text href=email.href blank=true }}           
+            {{>link text=phone.text href=phone.href blank=true }}        
             {{>link text=linkedIn.text href=linkedIn.href blank=true }}
-
             {{>link text=instagram.text href=instagram.href blank=true }}   
         {{/with}}
 
@@ -16,7 +11,7 @@
     </div>
     <br>
 
-    <div>
+    <div class="my-3">
         <em>Copyright by{{firstname}} {{lastname}}</em>
     </div>
     <br>
@@ -26,3 +21,4 @@
             {{address}}   
         </address>
     </div>
+</footer>
