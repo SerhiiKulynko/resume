@@ -1,0 +1,23 @@
+ <div class="row">
+    <div class="col-4">
+        <div>{{number}}</div>
+        <div class="h6 mt-2">{{status}}</div>
+    </div>
+    <div class="col-2">
+        {{#with amount}}
+            <div>{{title}}</div>
+            <b><div>{{value}}</div></b>
+        {{/with}}
+    </div>
+    <div class="col-4 nav">
+        {{#each images}}
+            <img src={{this}} width="60px" height="60px" class="m-1">
+        {{/each}}
+    </div>
+    <div class="col-2">
+        {{#with button}}
+            <a href={{link}} target="_blank" 
+            {{#if isPrimary}}class="btn btn-primary"{{/if}}>{{text}}</a>
+        {{/with}}
+    </div>
+</div>
