@@ -1,0 +1,187 @@
+<main>
+    <div>
+        {{#with navigation}}
+            <div class="nav">
+                {{#each links}}
+                    <div>
+                        <a href={{href}} target="_blank"
+                        class="nav-link nav-item">{{text}}</a>
+                    </div>                    
+                {{/each}}
+                <div>
+                    <a href="#" target="_blank" 
+                    class="nav-link nav-item disabled">Disabled</a>
+                </div>                
+            </div>
+        {{/with}}
+    </div>
+    {{>line}}    
+    <ol class="breadcrumb nav">                             
+        {{#each breadcrumb}}
+            <li class="breadcrumb-item"> 
+                {{#if url}} 
+                    <a href={{url}} target="_blank" class="nav-link">{{name}}</a>  
+                {{else}}
+                    <a href={{url}} target="_blank" class="disabled nav-link">{{name}}</a> 
+                {{/if}}
+            </li>          
+        {{/each}}        
+    </ol>
+    <div class="h3 ms-3">{{header}}</div>  
+    <div class="row">
+        {{#each sortBlock}}
+            <div class="col-4">
+                <select class="form-select">
+                    <option selected>{{placeholder}}</option>
+                    <div>
+                        {{#each options}}
+                            <option value={{value}}>{{text}}</option>                       
+                        {{/each}}
+                    </div>
+                </select>
+            </div>
+        {{/each}}
+        <div class="col-3">
+            <div class="card mt-2 p-2">
+                {{#with filterBlock}}
+                    <div>
+                        {{#with sellers}}
+                            <div class="form-label">{{title}}</div>
+                            <div>
+                                {{#each list}}
+                                    <div class="form-check">
+                                        <lable class="form-check-label">{{value}}</lable>
+                                        <input name="seller" type="checkbox" class="form-check-input">
+                                    </div>
+                                {{/each}}
+                            </div>
+                        {{/with}}
+                    </div>
+                    {{>line}}
+                    <div>
+                        {{#with brands}}
+                            <div class="form-label">{{title}}</div>
+                            <div class="m-2">
+                                {{#with input}}
+                                    <input class="form-control" placeholder={{placeholder}}>
+                                {{/with}}
+                            </div>
+                            <div>
+                                {{#each options}}
+                                    <div class="form-check">
+                                        <lable class="form-check-label">{{value}}</lable>
+                                        <input name="seller" type="checkbox" class="form-check-input">
+                                    </div>                            
+                                {{/each}}
+                            </div>
+                        {{/with}}
+                    </div>
+                    {{>line}}
+                    <div>
+                        {{#with price}}
+                            <div class="form-label">{{title}}</div>
+                            <div>
+                                {{#with range}}
+                                    <div >
+                                        <input class="form-control m-1" placeholder={{from}}>
+                                        <input class="form-control m-1" placeholder={{to}}>
+                                    </div>
+                                {{/with}}
+                            </div>
+                            <div>
+                                {{#with button}}
+                                    <a href={{link}} target="_blank" class="btn btn-outline-secondary m-2">{{text}}</a>
+                                {{/with}}
+                            </div>
+                        {{/with}}
+                    </div>
+                    {{>line}}
+                    <div>
+                        {{#each filterList}}
+                        <div>
+                            <div class="form-label">{{title}}</div>
+                            <div class="form-check">
+                                {{#each options}}
+                                    <div>
+                                        <input type="checkbox" 
+                                        class="form-check-input">{{value}}</input>
+                                    </div>
+                                {{/each}}
+                            </div>
+                            {{#if @last}}
+                            {{else}}
+                            {{>line}}
+                            {{/if}}
+                        </div>
+                        {{/each}}
+                    </div>
+                {{/with}}
+            </div>            
+        </div>
+        <div class="col-9">
+            <div class="row">
+                {{#each goodsList}}
+                    <div class="card mt-2 m-3 p-2 col-5">
+                        <img class="card-img-top m-1 text-center" src={{img}} height="150px" width="200px">
+                        <div class="nav">
+                            <h5>{{#if isHot}}<span class="badge bg-warning text-uppercase m-1">Hot!</span>{{/if}}</h5>
+                            <h5>{{#if isNew}}<span class="badge bg-primary m-1">Нове</span>{{/if}}</h5>
+                        </div> 
+                        <div>{{#if isFast}}<button class="btn btn-sm btn-success m-1">Швидка доставка</button>{{/if}}</div> 
+                        <div>{{#if isFree}}<button class="btn btn-sm btn-secondary m-1">Безкоштовна доставка</button>{{/if}}</div> 
+                        <div class="card-title h5 mt-2">{{name}}</div>  
+                        <div>
+                            {{#with review}}
+                                {{amount}} {{text}}
+                            {{/with}}
+                        </div> 
+                        <div class="h5 mt-1">{{price}}</div>   
+                        <div>{{delivery}}</div>      
+                        <div>
+                            {{#each buttons}}
+                                <a href={{link}} target="_blank" 
+                                {{#if isPrimary}}class="btn btn-sm btn-primary m-1"{{/if}}
+                                {{#if isSecondary}}class="btn btn-sm btn-secondary m-1"{{/if}}>
+                                {{text}}</a>
+                            {{/each}}
+                        </div>   
+                        <div>
+                            {{#each characteristics}}
+                                <ul>
+                                    <li>{{title}} : {{value}}</li>
+                                </ul>
+                            {{/each}}
+                        </div> 
+                    </div>                
+                {{/each}}
+            </div>
+        </div>
+    </div>  
+    <div class=" card mt-3 text-center text-bg-success">
+        {{#with service}}
+            <div class="h2">{{title}}</div>
+            <p>{{description}}</p>
+            <div>
+                {{#each buttons}}
+                    <a href={{link}} target="_blank" class="btn btn-primary mb-2">{{text}}</a>
+                {{/each}}
+            </div>
+        {{/with}}
+    </div>
+    <div class="mt-5">{{>line}}</div>
+    <div class="nav">
+        {{#each footer}}
+            <div class="nav-item col-2">
+                {{#each this}}
+                    {{#if @last}}
+                        <a href={{link}} target="_blank"
+                        class="nav-link disabled">{{text}}</a>
+                    {{else}}
+                        <a href={{link}} target="_blank"
+                        class="nav-link">{{text}}</a>
+                    {{/if}}
+                {{/each}}
+            </div>
+        {{/each}}
+    </div>
+</main>
