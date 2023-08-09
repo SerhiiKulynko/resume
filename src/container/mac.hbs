@@ -1,14 +1,14 @@
-<div>    
+<div class="p-5">    
     <div><h2>{{name}} <span class="badge bg-secondary">New</span></h2></div>
-    <hr>
-    <hr>
+    {{>line}}
+    {{>line}}
     <div><b>{{description}}</b></div>
     <br>
     <div><b>Price: {{price}}</b></div>
     <br>
     <div><b>Category: {{category}}</b></div>
     <br>
-    <hr>
+    {{>line}}
     <div>
         <div><h3>Features</h3></div>
         {{#with features}}

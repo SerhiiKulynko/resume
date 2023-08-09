@@ -1,16 +1,16 @@
-<div>
+<div class="p-5">
     <div><h2>{{name}}</h2></div>
-    <hr>
-    <hr>
+    {{>line}}
+    {{>line}}
     <div><b>{{description}}</b></div>
-    <hr>
+    {{>line}}
     <div>
         {{#with history}}
             <div>Created: {{year}}</div>
             <div>Founder: {{founder}}</div>
         {{/with}}
     </div>
-    <hr>
+    {{>line}}
     <ul>
         {{#if types}}
         <div><b>Types:</b></div>

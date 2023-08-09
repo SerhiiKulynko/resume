@@ -47,7 +47,7 @@ router.get('/', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index', {
-    layout: `basic`,
+    layout: `index`,
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
@@ -237,7 +237,7 @@ router.get('/work', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
     // ↙ сюди вводимо JSON дані
-    layout: `big`,
+    layout: `basic`,
 
     page: {
       title: `Resume / Work`,
@@ -1264,6 +1264,7 @@ router.get('/task31', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
+    layout: 'shop',
     navigation: {
       links: [
         {
@@ -2716,7 +2717,7 @@ router.get('/shopreview', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
-    // layout: 'shop',
+    layout: 'shop',
     navigation: {
       links: [
         {
@@ -2996,14 +2997,13 @@ router.get('/shopreview', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopcatalog', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcatalog', {
-    // layout: 'shop',
+    layout: 'shop',
     navigation: {
       links: [
         {

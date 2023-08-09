@@ -1,12 +1,12 @@
-<div>
+<div class="p-4">
     {{#with person}}
         <div>
-            <h1>{{name}}</h1>
+            <h1 class="ps-5">{{name}}</h1>
             <hr>
             <hr>
-            <div><b>Years: {{age}},  {{gender}}</b></div><br>
+            <div class="ps-5"><b>Years: {{age}},  {{gender}}</b></div><br>
             <br>
-            <div>
+            <div class="ps-5">
                 <div><b>Address:</b></div>
                 {{#with address}}
                     <ul>{{street}}, {{city}},<br> {{state}}, {{zip}}, {{country}}</ul>
@@ -16,9 +16,9 @@
                     <div>
                         <ul>
                             {{#each education}}
-                                <hr>
+                                {{>line}}
                                     <div><h3>Educational background</h3></div>
-                                <hr>
+                                {{>line}}
                                 <li>
                                     <div>Degree: {{degree}}</div> <br>
                                     <div>Major: {{major}}</div><br>
@@ -32,7 +32,7 @@
                 </section>
             </div>
 
-            <div>
+            <div class="ps-4">
                 <section>
                     <div>
                         {{#each workExperience}}

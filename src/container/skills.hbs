@@ -6,8 +6,8 @@
 <div>
         
     {{#with main}}
-    <main>
-       <section>
+    <main class="row">
+       <section class="col-5">
         {{> title data="All skills" big=true}}
         <ul>
             {{#each skills}}
@@ -26,9 +26,9 @@
         </ul>
        </section>
 
-       <section>
+       <section class="col-5">
             {{>title data="My hobbies" big=false}}
-            <ol>
+            <ol class="mt-5">
                 {{#each hobbies}}
                     <li>
                         {{name}}
